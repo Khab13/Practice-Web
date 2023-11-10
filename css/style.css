@@ -153,7 +153,7 @@ img {
 
 .intro {
   min-height: 100vh;
-  background: url(../img/intro-bg.jpg) center/cover no-repeat;
+  background: url(../img/intro-bg-min.jpg) center/cover no-repeat;
   padding: 263px 0 431.2px   0;
 }
 
