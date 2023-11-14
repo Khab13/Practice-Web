@@ -72,3 +72,18 @@
     scrollTo();
 }());
 
+
+window.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll('.video__item');
+
+    videos.forEach(function (video) {
+        video.addEventListener('click', () => {
+            if (video.classList.contains('ready')) {
+                return;
+            }
+            video.classList.add('ready');
+            const src = video.dataset.src;
+            video.insertAdjacentHTML('afterbegin', '<iframe class="video__element" src="' + src + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+        })
+    })
+})
