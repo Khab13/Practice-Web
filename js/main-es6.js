@@ -1,7 +1,7 @@
 (function () {
     const header = document.querySelector('.header');
     window.onscroll = () => {
-        if (window.pageYOffset > 50) {
+        if (window.scrollY > 50) {
             header.classList.add('header__active')
         } else {
             header.classList.remove('header__active')
@@ -36,10 +36,9 @@
 
     const smoothScroll = function (targetEl, duration) {
         const headerElHeight = document.querySelector('.header').clientHeight;
-        console.log(headerElHeight);
         let target = document.querySelector(targetEl);
         let targetPosition = target.getBoundingClientRect().top - headerElHeight;
-        let startPosition = window.pageYOffset;
+        let startPosition = window.scrollY;
         let startTime = null;
 
         const ease = function (t, b, c, d) {
